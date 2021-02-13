@@ -1,5 +1,8 @@
 BUILD_TYPE=Release
 ROOT_DIR=$(pwd)
+
+mkdir build
+
 BUILD_DIR=$ROOT_DIR/build/$BUILD_TYPE
 INSTALL_DIR=$$ROOT_DIR/build/install/$BUILD_TYPE
 
