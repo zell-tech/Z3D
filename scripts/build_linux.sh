@@ -1,5 +1,3 @@
-sudo apt-get install cmake
-
 BUILD_TYPE=Release
 ROOT_DIR=$(pwd)
 
