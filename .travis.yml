@@ -5,13 +5,10 @@ os:
 dist: bionic
 
 compiler:
-    -clang++
     -gcc
 
-install:
-    -cmake
-
 script:
+  sudo apt-get update
 - sh ./scripts/build_linux.sh
 
 notification:
