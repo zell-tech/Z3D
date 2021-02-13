@@ -11,9 +11,6 @@ compiler:
 install:
     -cmake
 
-branches:
-    only:
-        -main
 script:
 - sh ./scripts/build_linux.sh
 
