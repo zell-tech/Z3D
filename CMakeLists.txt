@@ -37,7 +37,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 target_include_directories(${PROJECT_NAME}
     PUBLIC 
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}> 
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/z3d/include>
     PRIVATE 
         ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
@@ -64,7 +64,7 @@ install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-install(DIRECTORY "include/${PROJECT_NAME}" DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(DIRECTORY "z3d/include/${PROJECT_NAME}" DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
@@ -78,6 +78,6 @@ install(EXPORT "${PROJECT_NAME}Targets"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/
 )
 
-install(FILES "cmake/${PROJECT_NAME}Config.cmake" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
+install(FILES "${PROJECT_NAME}Config.cmake" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/
 )
