@@ -15,7 +15,7 @@ project(Z3D VERSION 2.4.0 LANGUAGES CXX CUDA)
 # find_package(CUDA)
 
 # Mark all public headers
-file(GLOB_RECURSE ALL_HEADER_FILES "z3d/include/CS3D/*.h")
+file(GLOB_RECURSE ALL_HEADER_FILES "z3d/include/Z3D/*.h")
 
 include_directories("z3d/include")
 
